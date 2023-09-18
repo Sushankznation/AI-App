@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-export default function Home (){
+export default function Dashboard (){
   return(
     <div> Hello 
-      <Button>Moon</Button>
+      <Button variant="destructive">Moon</Button>
     </div>
   )
 }
