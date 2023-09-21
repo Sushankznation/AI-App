@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Menu } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "./ui/sheet";
 import Sidebar from "@/components/sidebar";
 export default function MobileSidebar() {
