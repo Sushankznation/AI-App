@@ -9,7 +9,7 @@ export default function MobileSidebar() {
   useEffect(() => {
     setIsmounted(true);
   }, []);
-  if(!ismounted){
+  if (!ismounted) {
     return null;
   }
   return (
@@ -25,4 +25,4 @@ export default function MobileSidebar() {
     </Sheet>
   );
 }
-//Done
+
