@@ -26,37 +26,37 @@ const routes = [
   {
     label: "Conversation",
     icon: MessageSquare,
-    href: "/dashboard",
+    href: "/conversation",
     color: "text-violet-500",
   },
   {
     label: "Image Generator",
     icon: ImageIcon,
-    href: "/dashboard",
+    href: "/image-generator",
     color: "text-pink-700",
   },
   {
     label: "Video Generator",
     icon: VideoIcon,
-    href: "/dashboard",
+    href: "/video-generator",
     color: "text-orange-300",
   },
   {
     label: "Music Generator",
     icon: Music,
-    href: "/dashboard",
+    href: "/music-generator",
     color: "text-emerald-500",
   },
   {
     label: "Code Generator",
     icon: Code,
-    href: "/dashboard",
+    href: "/code-generator",
     color: "text-green-700",
   },
   {
     label: "Settings",
     icon: Settings,
-    href: "/dashboard",
+    href: "/settings",
     color: "text-emerald-500",
   },
 ];
@@ -83,8 +83,8 @@ export default function Sidebar() {
               className={cn(
                 "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
                 pathName === route.href
-                  ? "text-zinc-400"
-                  : "text-white bg-white/10"
+                  ? "text-white bg-white/10"
+                  : "text-zinc-400"
               )}
             >
               <div className="flex items-center flex-1">
