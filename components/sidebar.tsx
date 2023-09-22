@@ -70,7 +70,7 @@ export default function Sidebar() {
             <Image fill alt="logo" src={Logo} />
           </div>
           <h1 className={cn("text-2xl font-bold", montserrat.className)}>
-            GYANI
+            GYANI BABA
           </h1>
         </Link>
         <div className="space-y-1">
