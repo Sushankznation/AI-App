@@ -26,5 +26,3 @@ export default function MobileSidebar() {
   );
 }
 
-// ?/methodName = (params) => {
-
