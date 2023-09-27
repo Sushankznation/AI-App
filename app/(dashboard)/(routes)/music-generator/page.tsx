@@ -5,4 +5,4 @@ export default function page() {
     <div>page</div>
   )
 }
-//Added page
+//Added pageAdded page
