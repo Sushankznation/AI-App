@@ -5,4 +5,3 @@ export default function page() {
     <div>page</div>
   )
 }
-//Added pageAdded pageAdded pageAdded pageAdded pageAdded page
