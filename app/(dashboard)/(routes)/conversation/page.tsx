@@ -1,6 +1,6 @@
 "use client";
 import { Heading } from "@/components/Heading";
-import axios from 'axios'
+import axios from "axios";
 import { Button } from "@/components/ui/button";
 import * as z from "zod";
 import { MessageSquare } from "lucide-react";
@@ -68,7 +68,7 @@ export default function ConversationPage() {
                 className="col-span-12 lg:col-span-2 w-full"
                 disabled={isLoading}
               >
-ASK
+                ASK
               </Button>
             </form>
           </Form>
@@ -78,4 +78,3 @@ ASK
     </div>
   );
 }
-//continue...

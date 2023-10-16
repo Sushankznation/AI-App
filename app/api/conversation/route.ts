@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI, { Configuration, OpenAIApi } from "openai";
 import { auth } from "@clerk/nextjs";
+
 const configuration = new Configuration({
   apiKey: process.env.OPEN_API_KEY,
 });
@@ -20,6 +21,12 @@ export async function POST(req: Request) {
     if (!messages) {
       return new NextResponse("Messages  are required", { status: 400 });
     }
+
+    const response = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages,
+    });
+    return NextResponse.json(response.data.choices[0].message);
   } catch (error) {
     console.log("{Conversation_Error", error);
     return new NextResponse("Internal Error", { status: 500 });
