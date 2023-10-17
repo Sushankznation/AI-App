@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import OpenAI, { Configuration, OpenAIApi } from "openai";
+import OpenAI from 'openai';
+
 import { auth } from "@clerk/nextjs";
 // import {createChatCompletion} from 'openai'
-const configuration = new Configuration({
-  apiKey: process.env.OPEN_API_KEY,
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAI(configuration);
 export async function POST(req: Request) {
   try {
     const { userId } = auth();

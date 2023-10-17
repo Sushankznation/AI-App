@@ -61,6 +61,18 @@ const routes = [
   },
 ];
 
+const cssStyles = `
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(720deg); // Rotate for 720 degrees (2 full turns) for a slower effect
+    }
+  }
+`;
+
+
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 export default function Sidebar() {
   const pathName = usePathname();
@@ -69,7 +81,7 @@ export default function Sidebar() {
       <div className="px-3 py-2 flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-14">
           <div className="relative w-8 h-8 mr-4">
-            <Image fill alt="logo" src={Logo} />
+            <Image fill alt="logo" src={Logo} className="animate-spin" />
           </div>
           <h1 className={cn("text-1xl font-bold", montserrat.className)}>
             GYANI BABA
