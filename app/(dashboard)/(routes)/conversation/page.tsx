@@ -17,7 +17,7 @@ import { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 export default function ConversationPage() {
   const router = useRouter();
   const [messages, setMesssages] = useState<ChatCompletionMessageParam[]>([]);
-
+z
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,7 +40,6 @@ export default function ConversationPage() {
       form.reset();
     } catch (error: any) {
       //TODO Open Pro Model
-      console.log(error);
     } finally {
       router.refresh();
     }
@@ -99,9 +98,9 @@ export default function ConversationPage() {
         </div>
         <div className="space-y-4 mt-4">
           <div className="flex flex-col-reverse gap-y-4">
-            {
-              messages.map((message)=>(<div key={message.content}></div>))
-            }
+            {messages.map((message) => (
+              <div key={message.content}></div>
+            ))}
           </div>
         </div>
       </div>
